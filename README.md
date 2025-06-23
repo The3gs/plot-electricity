@@ -7,7 +7,7 @@ I would like to add daily ranges, as well as the hourly usage. Maybe if I get th
 
 ## Wasm
 
-The template I used had wasm support, and I have left htat in so far, but it is broken because of the file picker.
+The template I used had wasm support, and I have left that in so far, but it is broken because of the file picker.
 
 I don't know enough to fix this, and you need to read the file, so no web version for now.
 Maybe later.
