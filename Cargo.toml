@@ -1,10 +1,9 @@
 [package]
-name = "eframe_template"
+name = "plot-electricity"
 version = "0.1.0"
-authors = ["Emil Ernerfeldt <emil.ernerfeldt@gmail.com>"]
+authors = ["Ben Grant <benjaminolivergrant@gmail.com>"]
 edition = "2021"
 include = ["LICENSE-APACHE", "LICENSE-MIT", "**/*.rs", "Cargo.toml"]
-rust-version = "1.81"
 
 [package.metadata.docs.rs]
 all-features = true
@@ -16,7 +15,6 @@ eframe = { version = "0.31", default-features = false, features = [
     "accesskit",     # Make egui compatible with screen readers. NOTE: adds a lot of dependencies.
     "default_fonts", # Embed the default egui fonts.
     "glow",          # Use the glow rendering backend. Alternative: "wgpu".
-    "persistence",   # Enable restoring app state when restarting the app.
     "wayland",       # To support Linux (and CI)
     "x11",           # To support older Linux distributions (restores one of the default features)
 ] }
@@ -24,6 +22,11 @@ log = "0.4.27"
 
 # You only need serde if you want app persistence:
 serde = { version = "1.0.219", features = ["derive"] }
+anyhow = "1.0.98"
+egui_plot = "0.32.1"
+rfd = "0.15.3"
+egui_extras = { version = "0.31.1", features = ["chrono", "datepicker", "serde"] }
+chrono = "0.4.41"
 
 # native:
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
